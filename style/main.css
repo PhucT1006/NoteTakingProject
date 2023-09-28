@@ -14,7 +14,10 @@ nav{
     align-items: center;
     background-color: #3A6B35; /* subject to change */
 }
-
+img{
+    
+    padding: 1rem 0 1rem 2rem;
+}
 label{
     font-family: "League Spartan", sans-serif; 
     color: whitesmoke;
@@ -24,7 +27,7 @@ label{
 li, a{
     font-family: "League Spartan", sans-serif; 
     color: whitesmoke;
-    font-size: 2rem; 
+    font-size: 1.3rem; 
 }
 
 .nav-links li{ 
