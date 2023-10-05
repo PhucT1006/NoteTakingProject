@@ -33,12 +33,19 @@ li, a{
 .nav-links li{ 
     display: inline-block;
     margin: 0.2rem;
-    padding: 0.5rem 1.5rem 0.5rem 0rem;
+    padding: 0.5rem 1rem 0.5rem 0rem;
 }
 
-a:hover{
-    background-color: #CBD18F;
-}
+
+a {
+    padding: 0.25rem;
+    transition: color .1s ease-in,.3s ease-out;
+  }
+  a:hover {
+    box-shadow: inset 135px 0 0 0  #E3B448; 
+    color: black;
+  }
+  
 
 /*  nav label{
     display: flex;
