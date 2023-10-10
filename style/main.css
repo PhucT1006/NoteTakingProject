@@ -1,64 +1,51 @@
 
  @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
- *{
+ *{ /*reset*/
     margin:0;
     padding: 0;
     text-decoration: none;
    list-style-type: none;
-    box-sizing: border-box;
+    box-sizing: border-box; /*make the text, padding, and margin a box */
 }    
 
-nav{
-    display:flex;
+nav{ /*editing the nav elements and everything containing within it */
+    display:flex; 
     justify-content: space-between;
     align-items: center;
     background-color: #3A6B35; /* subject to change */
 }
-img{
+.nav-img{ /*added padding for the logo in nav bar using the class "nav-img*/ 
     
     padding: 1rem 0 1rem 2rem;
 }
-label{
+
+.nav-links, a{ /* style the link on the nav bar with, font style, text color, font size, padding to get link into position wanted, and transition on the link*/
+    font-family: "League Spartan", sans-serif; 
+    color: whitesmoke;
+    font-size: 1.3rem; 
+    padding: 0.25rem;
+     transition: color .1s ease-in,.3s ease-out; 
+}
+
+.nav-links li{ /*adjust link to get it into 1 line, and add padding with border to get into position wanted */
+    display: inline-block;
+    margin: 0.3rem; 
+    padding: 0.5rem 1rem 0.5rem 0rem;
+}
+
+  a:hover { /*add shadow, inset so that it will encompass the element, 135px for the dimension in which the shadow will cover (135 px). also add color to the text when mouse hover over the link*/
+    box-shadow: inset 135px 0 0 0  #E3B448;  
+    color: black; /*color of text */
+  }
+  
+  @media screen and (min-width:576px) {
+    /*import the side nav bar thing into here, then code it. */
+  }
+
+
+  /* label{ 
     font-family: "League Spartan", sans-serif; 
     color: whitesmoke;
     font-size: 5rem; 
     padding: 0.3rem 0.3rem 0.3rem 1rem;
-}
-li, a{
-    font-family: "League Spartan", sans-serif; 
-    color: whitesmoke;
-    font-size: 1.3rem; 
-}
-
-.nav-links li{ 
-    display: inline-block;
-    margin: 0.2rem;
-    padding: 0.5rem 1rem 0.5rem 0rem;
-}
-
-
-a {
-    padding: 0.25rem;
-    transition: color .1s ease-in,.3s ease-out;
-  }
-  a:hover {
-    box-shadow: inset 135px 0 0 0  #E3B448; 
-    color: black;
-  }
-  
-
-/*  nav label{
-    display: flex;
-  
- }
- 
-.prime-nav-flex a{
-    font-size: 1.5rem;  
-    padding: 1rem;
-}
-
-.prime-nav-flex li{
-    padding: 1rem;
-    list-style-type:none;
-    display: inline;
 } */
