@@ -1,0 +1,20 @@
+
+/*
+https://cssgradient.io/
+used this website for the generated pattern 
+*/
+
+body{
+    background: rgb(151,188,98);
+background: linear-gradient(0deg, rgba(151,188,98,1) 30%, rgba(58,107,53,1) 100%);
+}
+
+/* body{
+    background: rgb(227,180,72);
+    background: linear-gradient(0deg, rgba(227,180,72,1) 0%, rgba(151,188,98,1) 43%, rgba(58,107,53,1) 100%);
+} */
+
+/* body{
+    background: rgb(227,180,72);
+background: linear-gradient(0deg, rgba(227,180,72,1) 0%, rgba(203,209,143,1) 43%, rgba(58,107,53,1) 100%);
+} */
