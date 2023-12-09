@@ -8,6 +8,9 @@
     box-sizing: border-box; /*make the text, padding, and margin a box */
 }    
 
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
 nav{ /*editing the nav elements and everything containing within it */
     display:flex; 
     justify-content: space-between;
@@ -42,13 +45,15 @@ nav{ /*editing the nav elements and everything containing within it */
 
 .container {
     /*  background-color:aqua;  */
+    display: flex;
     background-image: url("../img/mainpic.png");
-    width: 100%; 
-    max-width: 100%;
-    height:100%; 
-    max-height: 100%;
     background-size:cover;
+    width: 100%; 
+    height:100vh;  
+    position: absolute;
+    background-position: bottom;
     background-repeat: no-repeat;
+    
     
   /*   background-position:bottom; */
 }

@@ -8,22 +8,26 @@
     </head>
 
     <body>
-        <form action=""> <!-- make sure to figure out how to pull the information from the form and upload to database using javascript -->
-            <div class="container">
-                <h1>Sign Up Form</h1>
+        <div class="container">
+            <div class="wrap">
+                <form action=""> <!-- make sure to figure out how to pull the information from the form and upload to database using javascript --> 
+                    <h1 class="head">Sign Up</h1>
                     
-                <label for="Username"> Username:</label>
-                <input type="text" name="Username" id="Username" placeholder="Enter Username" required autofocus autocomplete="on">
+                   <!--  <label for="Username"> Username:</label> -->
+                    <input class="sign-txt" type="text" name="Username" id="Username" placeholder="Username" required autofocus>
 
-                <label for="Email"> Email:</label>
-                <input type="text" name="Email" id="Email" placeholder="Enter Email" autocomplete="on" required s>
+                   <!--  <label for="Email"> Email:</label> -->
+                    <input class="sign-txt" type="text" name="Email" id="Email" placeholder="Email"  required >
 
-                <label for="Password"> Password:</label>
-                <input type="password" name="Password" id="Password" placeholder="Enter Password" required >
+                   <!--  <label for="Password"> Password:</label> -->
+                    <input class="sign-txt "type="password" name="Password" id="Password" placeholder="Password" required >
 
-                <label for="Re-pass"> Confirm Password:</label>
-                <input type="Re-pass" name="Re-pass" id="Re-pass" placeholder="Confirm Password"  required >
+                 <!--    <label for="Re-pass"> Confirm Password:</label> -->
+                   <!--  <input type="password" name="Re-pass" id="Re-pass" placeholder="Confirm Password"  required > -->
+                
+                    <button type="submit"> Sign Up</button>
+                </form>
             </div>
-        </form>
+        </div>
     </body>
 </html>
