@@ -4,60 +4,60 @@ https://cssgradient.io/
 used this website for the generated pattern 
 */
 
-/* https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete
-https://stackoverflow.com/questions/6669846/css-input-field-text-color-of-inputted-text
- */
 *{ /*reset*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-}    
+}
+
+/*set the rem size to 10px*/
 html{
   font-size: 62.5%;
 }
 
-
+/*set the background pattern for the sign up page*/
 body{
   background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
 
 }
 
+/*set up the size for the container and center it in middle of page*/
   .container{
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /*X-Axis*/
+    align-items: center; /*Y-Axis*/
     
 }
 
   .wrap{
     width: 50rem ;
     height: 50rem ;
-   /*  background-color: #eee; */
     background-color: transparent;
     border-radius: 3rem;
-    box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.3); /* add shadow to the main box, rgba (0.3 is how transparent the shadow is, 0=transparent)*/
     position: relative;
     overflow: hidden;
   }
 
+  /*this includes the input box*/
    form{
      width: 50rem;
     height:  100%;
     display: flex;
-    position: absolute;
+    position: absolute; /*absolute position to the parent container (wrap)*/ 
     left: 50%;
-    transform: translateX(-50%);
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    transform: translateX(-50%); /*center of the "wrap"*/
+    flex-direction: column; 
+    justify-content: space-around; /*flex-column so this is Y-Axis*/
+    align-items: center;/*flex-column so this is X-Axis*/
     flex-wrap: nowrap;
     font-family: "League Spartan", sans-serif; 
-
- 
   } 
+
+  /*large header text on the page like "Sign Up"*/
 form .head{
   text-align: center;
   color: whitesmoke;
@@ -66,6 +66,7 @@ form .head{
   padding-top: 2.5rem;
 }
 
+/*input box in the form*/
 .sign-txt{
   font-family: "League Spartan", sans-serif; 
   font-size: 1.5rem;
@@ -73,19 +74,25 @@ form .head{
   height: 5rem;
   padding: 1rem 0 1rem 1rem;
   border: 1px none white; 
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  border-radius: 2.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+  border-radius: 2.5rem; 
   background-color: transparent;
   color: white;
   font-weight: 550;
 }
+
+/*change the color and size of the text that is a placeholder in the input box*/
 ::placeholder{
   color: white;
   font-size: 1.5rem;
 }
+
+/*change the color of the input box when clicked on*/
 input:focus, textarea{
   background-color: #23232329;
-}
+} 
+
+/*when using the autofill function this will keep the text box looking like the rest instead of switching to a white background*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -93,9 +100,9 @@ input:-webkit-autofill:active{
     -webkit-background-clip: text;
     -webkit-text-fill-color: #ffffff;
     transition: background-color 5000s ease-in-out 0s;
-
-}
-
+} 
+ 
+/*change the style of the button*/
 button{
   font-family: "League Spartan", sans-serif; 
   font-size: 2rem;
@@ -104,18 +111,23 @@ button{
   border-radius: 1.5rem;
   border: 1px solid whitesmoke;  
 }
+/*change the cursor style when hover over a button*/
 button:hover{
   cursor: pointer;
 }
 
-
+/*style the message "Already a user?" */
 .change-log{
   font-family: "League Spartan", sans-serif; 
   font-size: 1.5rem;
 }
+
+/*keep the color of the link the same even after already clicked on*/
 a:visited{
   color: black;
 }
+
+/*change the color of the link to white when hover mouse over it*/
 a:hover{
   color: white;
 }
