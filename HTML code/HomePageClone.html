@@ -2,8 +2,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Noter</title>
-        <link rel="stylesheet" href="../style/login.css" type="text/css">
+        <title>Noti</title>
+        <link rel="stylesheet" href="style/signup.css" type="text/css">
         <link rel="icon" href="download.png" type="icon"><!--create an icon and put that here, this will also be the logo of the website, need to make a simplified version of noter logo for this -->
     </head>
 
@@ -11,16 +11,21 @@
         <div class="container">
             <div class="wrap">
                 <form action=""> <!-- make sure to figure out how to pull the information from the form and upload to database using javascript --> 
-                    <h1 class="head">Log In </h1>
+                    <h1 class="head">Sign Up</h1>
                     
                    <!--  <label for="Username"> Username:</label> -->
-                    <input class="sign-txt" type="text" name="user/email" id="user/email" placeholder="Username/Email" required autofocus>
+                    <input class="sign-txt" type="text" name="Username" id="Username" placeholder="Username" required autofocus>
+
+                   <!--  <label for="Email"> Email:</label> -->
+                    <input class="sign-txt" type="text" name="Email" id="Email" placeholder="Email"  required >
 
                    <!--  <label for="Password"> Password:</label> -->
                     <input class="sign-txt "type="password" name="Password" id="Password" placeholder="Password" required >
-                    <button type="submit"> Log In</button>
-                    <a class= "change-sign" href="">Forgot Password?</a> <!--need to make a page for this -->
-                    <p class="change-sign">Need an account? <a class= "change-sign" href="SignUp.html">SIGN UP</a></p>
+
+                 <!--    <label for="Re-pass"> Confirm Password:</label> -->
+                   <!--  <input type="password" name="Re-pass" id="Re-pass" placeholder="Confirm Password"  required > -->
+                
+                    <button type="submit"> Sign Up</button>
                 </form>
             </div>
         </div>

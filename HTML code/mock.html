@@ -1,0 +1,36 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Noter</title>
+        <link rel="stylesheet" href="../style/mock.css" type="text/css">
+        <link rel="icon" href="download.png" type="icon"><!--create an icon and put that here, this will also be the logo of the website, need to make a simplified version of noter logo for this -->
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="wrap">
+                <form action=""> <!-- make sure to figure out how to pull the information from the form and upload to database using javascript --> 
+                    <h1 class="head">Sign Up</h1>
+                    
+                   <!--  <input class="sign-txt user" type="text" name="Username" id="Username" placeholder="Username" required autofocus> -->
+
+                    <input class="sign-txt email" type="email" name="Email" id="Email" placeholder="Email" oninput="emailCheck()" required > <!--maybe use onchange()-->
+                    <p class="error" id="emailError">Please Enter a Valid Email</p> 
+
+                    <input class="sign-txt pass"type="password" name="Password" id="Password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required   >
+                    <p class="error" id="passError">Password must contain the following:</p>
+                    <p class="requirement" id="characters" >Minimum 8 characters</p>
+                    <p class="requirement" id="upper" >An uppercase letter</p>
+                    <p class="requirement" id="lower" >A lowercase letter</p>
+                    <p class="requirement" id="number" >A number</p>
+                    
+                    <button class="button" type="submit"> Sign Up</button>
+
+                    <p class="change-log">Already a user? <a class= "change-log" href="LogIn.html">LOGIN</a></p>
+                </form>
+            </div>
+        </div>
+        <script src="../JS code/signUp.js"></script>
+    </body>
+</html>

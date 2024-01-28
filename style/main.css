@@ -9,7 +9,7 @@
 }    
 
 body {
-  overflow: hidden; /* Hide scrollbars */
+  overflow: hidden; /* Hide scrollbars, hides element that goes past the size of the screen*/
 }
 nav{ /*editing the nav elements and everything containing within it */
     display:flex; 
@@ -28,6 +28,10 @@ nav{ /*editing the nav elements and everything containing within it */
     font-size: 1.3rem; 
     padding: 0.25rem;
      transition: color .1s ease-in,.3s ease-out; 
+
+    animation: nav-slide; 
+    animation-duration:0.8s;
+    animation-timing-function: ease-in;
 }
 
 .nav-links li{ /*adjust link to get it into 1 line, and add padding with border to get into position wanted */
@@ -40,29 +44,64 @@ nav{ /*editing the nav elements and everything containing within it */
     box-shadow: inset 135px 0 0 0  #E3B448;  
     color: black; /*color of text */
   }
+
   /*when working on the css for the picture, use padding top and bottom to align the text in the middle*/
   /*for implementing images in css instead of html, use ../img/ to get into the correct folder for the images*/
 
 .container {
     /*  background-color:aqua;  */
     display: flex;
-    background-image: url("../img/mainpic.png");
-    background-size:cover;
+    background-image: url("../img/mainpic.png"); /*add the picture as a background image on the page*/
+    background-size:cover; /*set the size of the image to cover the page*/
     width: 100%; 
-    height:100vh;  
+    height:100vh;  /*take up 100% of the space available for the viewport*/
     position: absolute;
     background-position: bottom;
     background-repeat: no-repeat;
-    
+   
     
   /*   background-position:bottom; */
 }
 
-.main-text{
 
+.main-text{
+  font-family: "League Spartan", sans-serif; 
+  font-size: 5rem;
+  display: flex;
+  padding-left: 6rem;
+  padding-top: 10rem ;
+  color:  #28282B ;
+  width: 32rem;
+  animation-name: slide;
+  animation-duration:0.8s;
+  animation-timing-function: ease-in;
   
+}/* change the main text on the page */
+
+/*animation for the main text*/
+@keyframes slide{
+  0%{
+    opacity: 0;
+      transform: translateY(100px);
+  }
+  100%{
+    opacity: 1;
+      transform: translateY(0);
+  } 
 }
-  @media screen and (min-width:576px) {
+
+/*animation for the nav bar links*/
+@keyframes nav-slide {
+  0%{
+    opacity: 0;
+      transform: translateY(10px);
+  }
+  100%{
+    opacity: 1;
+      transform: translateY(0);
+  } 
+} 
+@media screen and (min-width:576px) {
     /*import the side nav bar thing into here, then code it. */
   }
 
