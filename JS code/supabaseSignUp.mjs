@@ -1,28 +1,31 @@
-import supabase from "./configClient.mjs"
+import supabase from "./configClient.mjs" // importing the supabase client 
 
-var sub = document.getElementById("button");
+var sub = document.getElementById("button"); // value of the button element on form 
 
 
-// live reloading
+// live reloading - once changes are made in the code this will refresh the page to implement the new code 
 //https://bobbyhadz.com/blog/a-listener-indicated-asynchronous-response-by-returning-true
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   return true 
 })
 
-
+// function to call the signUp function
 sub.addEventListener( 'submit', ()=>{
   signUp();
 }) 
 
+//signUp function to call the auth.signUp() from supabase to sign up a user 
 async function signUp(){
-  var em = document.getElementById("Email");
+// get value from the email and password input box 
+var em = document.getElementById("Email"); 
 var pas = document.getElementById("Password");
 
 let { data, error } = await supabase.auth.signUp({
+  //get values and then pass into the email and password box to create a user 
   email:em.value,
   password: pas.value,
 })
-if (error) console.log('Signup error', error);
+if (error) console.log('Signup error', error); // console.log the error
 }
 
 

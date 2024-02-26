@@ -1,4 +1,5 @@
 
+// getting the value of the elements on the html form 
 var emailError = document.getElementById("emailError");
 var passError = document.getElementById("passError");
  var emailIn = document.getElementById("Email");
@@ -9,6 +10,7 @@ var upper = document.getElementById("upper");
 var lower = document.getElementById("lower");
 var num = document.getElementById("number");
 
+// check values 
 var eCheck = false; 
 var charCheck = false;
 var upperCheck =  false;
@@ -20,7 +22,7 @@ var sub = document.getElementById("button");
 
 
 
-
+// regex to check email format 
 //https://dev.to/codemediaweb/simple-email-validation-in-javascript-css-57i6
 const emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
@@ -103,8 +105,3 @@ else{
     num.style.color = 'black';
 }
 })
-
-  //if(passIn)
-/* function emailCheck(){
-   
-} */
