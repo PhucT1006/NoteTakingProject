@@ -70,6 +70,7 @@ form .error{
       display: none;    
   font-family: "League Spartan", sans-serif; 
   font-size: 1.4rem;
+  font-weight: 600;
   height: 1rem;
   width: 29rem;
   padding: 1rem 0 0 1rem;
@@ -78,7 +79,7 @@ form .error{
 form .requirement{
   display: none;    
   font-family: "League Spartan", sans-serif; 
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.4rem;
   height: 1rem;
   width: 29rem;
