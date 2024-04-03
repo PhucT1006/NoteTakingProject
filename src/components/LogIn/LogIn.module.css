@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+/*
+https://cssgradient.io/
+used this website for the generated pattern 
+*/
+
+*{ /*reset*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/*set the rem size to 10px*/
+/* html{
+  font-size: 62.5%;
+} */
+
+/*set the background pattern for the sign up page*/
+ .background{
+  background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+
+} 
+
+/*set up the size for the container and center it in middle of page*/
+  .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /*X-Axis*/
+    align-items: center; /*Y-Axis*/
+    
+}
+
+  .wrap{
+    width: 31.25rem ;
+    height: 31.25rem ;
+    background-color: transparent;
+    border-radius: 1.875rem;
+    box-shadow: 0 1.25rem 6.25rem rgba(0, 0, 0, 0.3); /* add shadow to the main box, rgba (0.3 is how transparent the shadow is, 0=transparent)*/
+    position: relative;
+    overflow: hidden;
+  }
+
+  /*this includes the input box*/
+   .formStyle{
+     width: 31.25rem;
+    height:  100%;
+    display: flex;
+    position: absolute; /*absolute position to the parent container (wrap)*/ 
+    left: 50%;
+    transform: translateX(-50%); /*center of the "wrap"*/
+    flex-direction: column; 
+    /* justify-content: space-around;  *//*flex-column so this is Y-Axis*/
+    align-items: center;/*flex-column so this is X-Axis*/
+    flex-wrap: nowrap;
+    font-family: "League Spartan", sans-serif; 
+  } 
+
+  /*large header text on the page like "Sign Up"*/
+.formStyle .head{
+  text-align: center;
+  color: whitesmoke;
+  font-size: 3.75rem;
+  padding-bottom: 0.625rem;
+  padding-top: 2.719rem;
+}
+.formStyle .error{
+ /*1 rem for the message*/
+      display: none;    
+  font-family: "League Spartan", sans-serif; 
+  font-size: 0.875rem;
+  font-weight: 600;
+  height: 0.625rem;
+  width: 18.125rem;
+  padding: 0.625rem 0 0 0.625rem;
+}
+
+.formStyle .requirement{
+  display: none;    
+  font-family: "League Spartan", sans-serif; 
+  font-weight: 400;
+  font-size: 0.875rem;
+  height: 0.625rem;
+  width: 18.125rem;
+  padding: 1.25rem 0 0 0.625rem;
+}
+/*input box in the form*/
+
+.signTxt{
+  font-family: "League Spartan", sans-serif; 
+  font-size: 0.9375rem;
+  width: 18.75rem;
+  height: 3.125rem;
+  margin-top: 2.25rem;
+  padding: 0.625rem 0 0.625rem 0.625rem;
+  border: 1px none white; 
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); 
+  border-radius: 1.5625rem; 
+  background-color: transparent;
+  color: white;
+  font-weight: 550;
+}
+
+/*change the color and size of the text that is a placeholder in the input box*/
+::placeholder{
+  color: white;
+  font-size: 0.9375rem;
+}
+
+/*change the color of the input box when clicked on*/
+.signTxt:focus{
+  background-color: #23232329;
+} 
+
+/*when using the autofill function this will keep the text box looking like the rest instead of switching to a white background*/
+.signTxt:-webkit-autofill,
+.signTxt:-webkit-autofill:hover, 
+.signTxt:-webkit-autofill:focus, 
+.signTxt:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+} 
+ 
+/*change the style of the button*/
+/*1 rem for password, so add 1 rem into the margin-top for the password box*/
+
+.sub{
+  font-family: "League Spartan", sans-serif; 
+  font-size: 1.25rem;
+  width: 9.375rem;
+  height: 1.875rem;
+  padding-top: 0.15625rem;
+  border-radius: 0.9375rem;
+  margin-top: 3.125rem;
+  margin-bottom: 1rem;
+  border: 1px solid whitesmoke;  
+}
+
+
+
+/*change the cursor style when  md hover over a button*/
+.sub:hover{
+  cursor: pointer;
+}
+
+/*style the message "Already a user?" */
+/*when the password error msg appears, change the margin-top*/
+.changeMessage{
+  font-family: "League Spartan", sans-serif; 
+  font-size: 0.9375rem;
+  margin-top: 1rem;
+  /* margin-top: 2.1875rem; */
+}
+
+.changePage{
+  font-family: "League Spartan", sans-serif; 
+  font-size: 0.9375rem;
+  margin-top: 2.1875rem;
+  
+  /* margin-top: 1rem; */
+}
+.changePage:link{
+    color: black;
+}
+.changePage:active{
+    color: black;
+}
+/*keep the color of the link the same even after already clicked on*/
+.changePage:visited{
+  color: black;
+}
+
+/*change the color of the link to white when hover mouse over it*/
+.changePage:hover{
+  color: white;
+}
+
+
+

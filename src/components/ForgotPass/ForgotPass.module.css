@@ -65,7 +65,7 @@ used this website for the generated pattern
   padding-bottom: 0.625rem;
   padding-top: 2.719rem;
 }
-.formStyle.error{
+.formStyle .error{
  /*1 rem for the message*/
       display: none;    
   font-family: "League Spartan", sans-serif; 
@@ -92,7 +92,7 @@ used this website for the generated pattern
   font-size: 0.9375rem;
   width: 18.75rem;
   height: 3.125rem;
-  margin-top: 2.25rem;
+  margin-top: 4rem;
   padding: 0.625rem 0 0.625rem 0.625rem;
   border: 1px none white; 
   box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); 
@@ -134,12 +134,13 @@ used this website for the generated pattern
   padding-top: 0.15625rem;
   border-radius: 0.9375rem;
   margin-top: 3.125rem;
+  margin-bottom: 1rem;
   border: 1px solid whitesmoke;  
 }
 
 
 
-/*change the cursor style when hover over a button*/
+/*change the cursor style when  md hover over a button*/
 .sub:hover{
   cursor: pointer;
 }
@@ -149,16 +150,23 @@ used this website for the generated pattern
 .changeMessage{
   font-family: "League Spartan", sans-serif; 
   font-size: 0.9375rem;
-  margin-top: 2.1875rem;
+  margin-top: 1rem;
+  /* margin-top: 2.1875rem; */
 }
 
 .changePage{
   font-family: "League Spartan", sans-serif; 
   font-size: 0.9375rem;
   margin-top: 2.1875rem;
+  
   /* margin-top: 1rem; */
 }
-
+.changePage:link{
+    color: black;
+}
+.changePage:active{
+    color: black;
+}
 /*keep the color of the link the same even after already clicked on*/
 .changePage:visited{
   color: black;
@@ -168,3 +176,6 @@ used this website for the generated pattern
 .changePage:hover{
   color: white;
 }
+
+
+

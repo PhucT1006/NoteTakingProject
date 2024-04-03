@@ -8,10 +8,10 @@
    box-sizing: border-box; /*make the text, padding, and margin a box */
 }    
 
-body {
- overflow: hidden; /* Hide scrollbars, hides element that goes past the size of the screen*/
-}
-nav{ /*editing the nav elements and everything containing within it */
+  body {
+ overflow: hidden;  
+} 
+.navBar{ /*editing the nav elements and everything containing within it */
    display:flex; 
    justify-content: space-between;
    align-items: center;
@@ -22,7 +22,7 @@ nav{ /*editing the nav elements and everything containing within it */
    padding: 1rem 0 1rem 2rem;
 }
 
-.navLinks, a{ /* style the link on the nav bar with, font style, text color, font size, padding to get link into position wanted, and transition on the link*/
+ .navLinks,.links{ /* style the link on the nav bar with, font style, text color, font size, padding to get link into position wanted, and transition on the link*/
    font-family: "League Spartan", sans-serif; 
    color: whitesmoke;
    font-size: 1.3rem; 
@@ -33,14 +33,14 @@ nav{ /*editing the nav elements and everything containing within it */
    animation-duration:0.8s;
    animation-timing-function: ease-in;
 }
-
-.navLinks li{ /*adjust link to get it into 1 line, and add padding with border to get into position wanted */
+/*linkSpace*/
+.navLinks .liItems{ /*adjust link to get it into 1 line, and add padding with border to get into position wanted */
    display: inline-block;
    margin: 0.3rem; 
    padding: 0.5rem 1rem 0.5rem 0rem;
 }
 
- a:hover { /*add shadow, inset so that it will encompass the element, 135px for the dimension in which the shadow will cover (135 px). also add color to the text when mouse hover over the link*/
+ .links:hover { /*add shadow, inset so that it will encompass the element, 135px for the dimension in which the shadow will cover (135 px). also add color to the text when mouse hover over the link*/
    box-shadow: inset 135px 0 0 0  #E3B448;  
    color: black; /*color of text */
  }
