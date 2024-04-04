@@ -4,11 +4,12 @@ import s from "./SignUp.module.css";
 
 const handleSubmit = async () => {
   const { data, error } = await supabase.auth.signUp({
-    email: "bob@gmail.com",
-    password: "123@Abc!",
+    email: "bob234@gmail.com",
+    password: "1212343@Abc!",
   });
 };
 
+const EmailIn = () => {};
 const Signup = () => {
   return (
     <>
@@ -25,9 +26,10 @@ const Signup = () => {
                 placeholder="Email"
                 required
               />
-              {/*  <p className={s.error} id="error">
-              error msg
-            </p> */}
+              <p className={s.error} id="emailError">
+                Please Enter a Valid Email
+              </p>
+
               <input
                 className={s.signTxt}
                 type="password"
@@ -36,6 +38,22 @@ const Signup = () => {
                 placeholder="Password"
                 required
               />
+              <p className={s.error} id="passError">
+                Password must contain the following:
+              </p>
+
+              <p className={s.requirement} id="characters">
+                Minimum 8 characters
+              </p>
+              <p className={s.requirement} id="upper">
+                An uppercase letter
+              </p>
+              <p className={s.requirement} id="lower">
+                A lowercase letter
+              </p>
+              <p className={s.requirement} id="number">
+                A number
+              </p>
               <button
                 type="submit"
                 className={s.sub}
