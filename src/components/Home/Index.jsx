@@ -1,5 +1,5 @@
 import style from "./Index.module.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 // change each to their own class name
 // <li className={[style.ListGroup, style.container].join(" ")}>

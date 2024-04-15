@@ -67,7 +67,7 @@ used this website for the generated pattern
 }
 .formStyle .error{
  /*1 rem for the message*/
-      display: none;    
+   
   font-family: "League Spartan", sans-serif; 
   font-size: 0.875rem;
   font-weight: 600;
@@ -76,8 +76,23 @@ used this website for the generated pattern
   padding: 0.625rem 0 0 0.625rem;
 }
 
+.formStyle .valid{
+  display: none;
+}
+
+.formStyle .passValid{
+  color: blue;
+  font-family: "League Spartan", sans-serif; 
+  font-weight: 400;
+  font-size: 0.875rem;
+  height: 0.625rem;
+  width: 18.125rem;
+  padding: 1.25rem 0 0 0.625rem;
+}
+
+
 .formStyle .requirement{
-  display: none;    
+   
   font-family: "League Spartan", sans-serif; 
   font-weight: 400;
   font-size: 0.875rem;

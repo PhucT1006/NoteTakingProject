@@ -21,7 +21,7 @@ const LogIn = () => {
                 id="user/email"
                 placeholder="Email"
                 required
-                autofocus
+                autoFocus
               />
 
               <input

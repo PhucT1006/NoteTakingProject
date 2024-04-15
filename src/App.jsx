@@ -11,9 +11,12 @@ import LogIn from "./components/LogIn/LogIn";
 import ForgotPass from "./components/ForgotPass/ForgotPass";
 import {
   Route,
+  BrowserRouter,
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
+  Router,
+  Routes,
 } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -58,7 +61,20 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/Notes" element={<Notes />} />
+          <Route path="/StudyMethods" element={<StudyMethod />} />
+          <Route path="/TodoList" element={<TodoList />} />
+          <Route path="/Pomodoro" element={<Pomodoro />} />
+          <Route path="/MyNotes" element={<MyNotes />} />
+          <Route path="/LogIn" element={<LogIn />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/ForgotPass" element={<ForgotPass />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
