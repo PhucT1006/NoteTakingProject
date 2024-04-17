@@ -3,7 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 
 // change each to their own class name
 // <li className={[style.ListGroup, style.container].join(" ")}>
-const Home = () => {
+const Index = () => {
   return (
     <>
       <div>
@@ -55,7 +55,7 @@ const Home = () => {
     </>
   );
 };
-export default Home;
+export default Index;
 /* {Pages.map((Page) => (
   <li key={Page}>
     <Link to={"/" + page}>{Page}</Link>

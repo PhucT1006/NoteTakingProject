@@ -1,0 +1,15 @@
+@page{
+    height: 210mm;
+    width: 297mm;
+}
+
+.background{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+    background-color: gray;
+    width: 100vw;
+    height: 100vh;
+    
+    margin: 2rem;
+}

@@ -16,6 +16,7 @@ const Signup = () => {
   });
 
   const [error, setError] = useState({});
+  const [Loading, setLoading] = useState(false);
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -49,7 +50,7 @@ const Signup = () => {
     try {
       await validationSchema.validate(formData, { abortEarly: false });
       setError("");
-
+      setLoading(true);
       SupabaseSignUp();
     } catch (error) {
       const newError = {};
@@ -97,7 +98,7 @@ const Signup = () => {
               <button
                 type="submit"
                 className={s.sub} /* disabled={!checkValidity} */
-              >
+                disabled={Loading}>
                 Sign Up
               </button>
 

@@ -67,17 +67,13 @@ used this website for the generated pattern
 }
 .formStyle .error{
  /*1 rem for the message*/
-      display: flex;
+      display: none;    
   font-family: "League Spartan", sans-serif; 
-
-  justify-content: center;
-  font-size: 1.5rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  color: red;
   height: 0.625rem;
   width: 18.125rem;
   padding: 0.625rem 0 0 0.625rem;
-
 }
 
 .formStyle .requirement{
@@ -96,7 +92,7 @@ used this website for the generated pattern
   font-size: 0.9375rem;
   width: 18.75rem;
   height: 3.125rem;
-  margin-top: 2.25rem;
+  margin-top: 4rem;
   padding: 0.625rem 0 0.625rem 0.625rem;
   border: 1px none white; 
   box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); 

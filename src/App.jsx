@@ -1,5 +1,6 @@
 // make sure to clean up code later
-
+import AuthRoute from "./components/AuthRoute/AuthRoute";
+import Home from "./components/Home/Home";
 import Index from "./components/Home/Index";
 import Notes from "./components/Notes/Notes";
 import StudyMethod from "./components/StudyMethod/StudyMethods";
@@ -9,6 +10,7 @@ import MyNotes from "./components/MyNotes/MyNotes";
 import Signup from "./components/SignUp/Signup";
 import LogIn from "./components/LogIn/LogIn";
 import ForgotPass from "./components/ForgotPass/ForgotPass";
+import Cornell from "./components/Cornell/Cornell";
 import {
   Route,
   BrowserRouter,
@@ -64,12 +66,15 @@ function App() {
       {/* <RouterProvider router={router} /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route element={<AuthRoute />}>
+            <Route path="/MyNotes" element={<MyNotes />} />
+            <Route path="/Home" element={<Home />} />
+          </Route>
           <Route path="/Notes" element={<Notes />} />
+          <Route path="/" element={<Index />} />
           <Route path="/StudyMethods" element={<StudyMethod />} />
           <Route path="/TodoList" element={<TodoList />} />
           <Route path="/Pomodoro" element={<Pomodoro />} />
-          <Route path="/MyNotes" element={<MyNotes />} />
           <Route path="/LogIn" element={<LogIn />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/ForgotPass" element={<ForgotPass />} />
