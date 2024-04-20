@@ -1,7 +1,7 @@
 // make sure to clean up code later
 import AuthRoute from "./components/AuthRoute/AuthRoute";
 import Home from "./components/Home/Home";
-import Index from "./components/Home/Index";
+import Index from "./components/Index/Index";
 import Notes from "./components/Notes/Notes";
 import StudyMethod from "./components/StudyMethod/StudyMethods";
 import TodoList from "./components/TodoList/TodoList";
@@ -10,6 +10,7 @@ import MyNotes from "./components/MyNotes/MyNotes";
 import Signup from "./components/SignUp/Signup";
 import LogIn from "./components/LogIn/LogIn";
 import ForgotPass from "./components/ForgotPass/ForgotPass";
+import ResetPass from "./components/ResetPassword/ResetPass";
 import Cornell from "./components/Cornell/Cornell";
 import {
   Route,
@@ -78,6 +79,7 @@ function App() {
           <Route path="/LogIn" element={<LogIn />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/ForgotPass" element={<ForgotPass />} />
+          <Route path="/ResetPass" element={<ResetPass />} />
         </Routes>
       </BrowserRouter>
     </>

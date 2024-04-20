@@ -67,7 +67,7 @@ used this website for the generated pattern
 }
 .formStyle .error{
  /*1 rem for the message*/
-      display: none;    
+        
   font-family: "League Spartan", sans-serif; 
   font-size: 0.875rem;
   font-weight: 600;

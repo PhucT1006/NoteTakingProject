@@ -2,7 +2,6 @@ import React, { useLayoutEffect, useState } from "react";
 import s from "./LogIn.module.css";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthProvider";
-import { set } from "react-hook-form";
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -43,7 +42,7 @@ const LogIn = () => {
         error,
       } = await login(formData.email, formData.password);
       if (error) setErrorMsg(error.message);
-      if (user && session) navigate("/");
+      if (user && session) navigate("/Home");
     } catch (error) {
       setErrorMsg("Email or Password incorrect");
     }

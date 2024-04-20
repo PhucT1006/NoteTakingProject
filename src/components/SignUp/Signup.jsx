@@ -67,6 +67,7 @@ const Signup = () => {
       email: formData.email,
       password: formData.password,
     });
+
     navigate("/");
   };
   return (

@@ -16,16 +16,29 @@ const signOut = () => supabase.auth.signOut();
 
 const passwordReset = (email) =>
   supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: "http://localhost:5173/update-password",
+    redirectTo: "http://localhost:5173/ResetPass",
   });
 
+const updatePassword = (updatedPassword) => {
+  supabase.auth.updateUser({ password: updatedPassword });
+};
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [auth, setAuth] = useState(false);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+    const getUser = async () => {
+      const { data } = await supabase.auth.getUser();
+      const { user: currentUser } = data;
+      setUser(currentUser ?? null);
+      setLoading(false);
+    };
+    getUser();
+
     const { data } = supabase.auth.onAuthStateChange((event, session) => {
-      if (event === "SIGNED_IN") {
+      if (event == "PASSWORD_RECOVERY") {
+        setAuth(false);
+      } else if (event === "SIGNED_IN") {
         setUser(session.user);
         setAuth(true);
       } else if (event === "SIGNED_OUT") {
@@ -39,8 +52,9 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ auth, user, login, signOut, passwordReset }}>
-      {children}
+    <AuthContext.Provider
+      value={{ auth, user, login, signOut, passwordReset, updatePassword }}>
+      {!loading && children}
     </AuthContext.Provider>
   );
 };
