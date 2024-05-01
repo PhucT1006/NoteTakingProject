@@ -8,7 +8,9 @@
    box-sizing: border-box; /*make the text, padding, and margin a box */
 }    
 
- 
+  /* body {
+ overflow: hidden;  
+}  */
 .outer{
   display: flex;
   justify-content: space-evenly;
@@ -16,7 +18,6 @@
   flex-grow: 1;
   flex-shrink: 1;
  height: 100vh;
- overflow:scroll;  
  /* background-color: ; */
 }
 .noteContainer{
@@ -27,7 +28,7 @@
   box-shadow: 0 1.25rem 6.25rem rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  flex-shrink: 11;
+  
 /* padding: 1rem; */
 margin-right: 1rem;
 margin-left: 1rem;
@@ -37,18 +38,16 @@ margin-top: 3rem;
 
 .title{
  font-family: "League Spartan", sans-serif; 
-display: flex;
-flex-wrap: nowrap;
-flex-shrink: 3;
-/*  display: flex;
- justify-content: center; */
+ display: flex;
+ justify-content: center;
+ 
  font-weight: 700;
  max-width: 12.5rem;
- font-size: 2rem;
+ font-size: 1.7rem;
  padding-top: 3rem;
- padding-left: 2rem;
- padding-right: 2rem;
- padding-bottom: 2.5rem;
+ padding-bottom: 2rem;
+ padding-left: 1rem;
+ padding-right: 1rem;
 
 }
 

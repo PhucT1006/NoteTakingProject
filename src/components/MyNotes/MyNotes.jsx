@@ -27,6 +27,7 @@ const MyNotes = () => {
           notes.map((note) => (
             <div className={s.noteContainer} key={note.id}>
               <div className={s.title}>{note.s1}</div>
+
               <Link to={"/" + note.id} className={s.btn}>
                 Edit
               </Link>

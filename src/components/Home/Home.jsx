@@ -19,29 +19,29 @@ const Home = () => {
         <div className={s.noteContainer}>
           <div className={s.title}>Cornell Template</div>
           <hr />
-          <Link to={"/CornellModal"} className={s.btn}>
-            Preview
+          <Link to={"/Cornell"} className={s.btn}>
+            Use Template
           </Link>
         </div>
         <div className={s.noteContainer}>
           <div className={s.title}> Outline Template </div>
           <hr />
           <Link to={"/OutlineModal"} className={s.btn}>
-            Preview
+            Use Template
           </Link>
         </div>
         <div className={s.noteContainer}>
           <div className={s.title}> Boxing Template </div>
           <hr />
           <Link to={"/BoxingModal"} className={s.btn}>
-            Preview
+            Use Template
           </Link>
         </div>
         <div className={s.noteContainer}>
           <div className={s.title}> Mapping Template </div>
           <hr />
           <Link to={"/MappingModal"} className={s.btn}>
-            Preview
+            Use Template
           </Link>
         </div>
       </div>

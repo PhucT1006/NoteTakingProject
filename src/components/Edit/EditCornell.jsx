@@ -2,8 +2,9 @@ import s from "./EditCornell.module.css";
 import supabase from "../../config/SupabaseClient";
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 const EditCornell = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [notes, setNotes] = useState(null);
   const [change1, setChange1] = useState("");
@@ -48,6 +49,19 @@ const EditCornell = () => {
       console.log(error);
     }
   };
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+
+    const deleteNotes = async () => {
+      const { error } = await supabase.from("note").delete().eq("id", id);
+      if (error) {
+        console.log(error);
+      }
+    };
+    deleteNotes();
+    navigate("/MyNotes");
+  };
   return (
     <>
       <div>
@@ -60,7 +74,12 @@ const EditCornell = () => {
               </Link>
             </li>
             <li className={s.liItems}>
-              <Link to={"/Notes"} className={s.links}>
+              <Link className={s.links} onClick={handleDelete}>
+                Delete
+              </Link>
+            </li>
+            <li className={s.liItems}>
+              <Link to={"/MyNotes"} className={s.links}>
                 Back
               </Link>
             </li>
