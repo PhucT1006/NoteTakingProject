@@ -51,9 +51,21 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
+  const getId = () => {
+    return supabase.auth.id;
+  };
+
   return (
     <AuthContext.Provider
-      value={{ auth, user, login, signOut, passwordReset, updatePassword }}>
+      value={{
+        auth,
+        user,
+        login,
+        signOut,
+        passwordReset,
+        updatePassword,
+        getId,
+      }}>
       {!loading && children}
     </AuthContext.Provider>
   );

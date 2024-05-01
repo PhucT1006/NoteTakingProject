@@ -66,13 +66,16 @@ z-index: -3;
 .quadrant1{
  /*    background-color: whitesmoke;  */
     background-color: antiquewhite;
-    margin: 0rem 0.25rem .3rem 0.25rem;
-    z-index: 999  ;
+    margin: 0.2rem 0.25rem .3rem 0.2rem;
+  /*   z-index: 999  ; */
 
+  
 
 }
 
 .editor1{
+    width: 100vw;
+    height: 3rem;
     overflow: hidden;
    
 }
@@ -87,8 +90,10 @@ flex: 0 0 40%;
    
 }
 .editor2{
-    overflow: hidden;
-    height: 20rem;
+    overflow:scroll;
+    width:32rem;
+    
+    height: 22.3rem;
 
 }
 .quadrant3{
@@ -96,13 +101,14 @@ flex: 0 0 40%;
     background-color: antiquewhite;
     flex: 1;
     margin: 0 0.25rem 0.3rem 0.25rem;
-    height: 20rem;
+    height: 22.3rem;
    
 }
 
 .editor3{
     overflow: hidden;
-    height: 20rem;
+    width: 47rem;
+    height: 22.3rem;
     
 }
 
@@ -111,15 +117,15 @@ flex: 0 0 40%;
 .quadrant4{
    /*  background-color: whitesmoke;  */
    background-color: antiquewhite;
-
-  
-    /* margin: 0 0.25rem 0rem 0.25rem; */
  height: 8rem;  
 }
 
 .editor4{
     overflow: hidden;
+    margin: 0 0.5rem 1rem 0.3rem;    
+    width: 100vw;
     height: 8rem;  
+
 }
 
 /*animation for the nav bar links*/

@@ -16,7 +16,7 @@ const Index = () => {
             width="160px"></img>
           <ul className={style.navLinks}>
             <li className={style.liItems}>
-              <Link to={"/Notes"} className={style.links}>
+              <Link to={"/LogIn"} className={style.links}>
                 Notes
               </Link>
             </li>

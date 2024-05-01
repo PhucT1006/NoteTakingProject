@@ -8,28 +8,27 @@
    box-sizing: border-box; /*make the text, padding, and margin a box */
 }    
 
-  body {
- overflow: hidden;  
-} 
+ 
 .outer{
   display: flex;
   justify-content: space-evenly;
- 
+ flex-wrap: wrap;
   flex-grow: 1;
   flex-shrink: 1;
  height: 100vh;
+ overflow:scroll;  
  /* background-color: ; */
 }
 .noteContainer{
-  width: 275px;
-  height: 425px;
+  width: 12.5rem;
+  height: 12.5rem;
   border-radius: 12px;
   background-color: rgba(255, 255, 255);
   box-shadow: 0 1.25rem 6.25rem rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  
-padding: 1.5625rem;
+  flex-shrink: 11;
+/* padding: 1rem; */
 margin-right: 1rem;
 margin-left: 1rem;
 margin-top: 3rem;
@@ -38,25 +37,34 @@ margin-top: 3rem;
 
 .title{
  font-family: "League Spartan", sans-serif; 
- display: flex;
- justify-content: center;
+display: flex;
+flex-wrap: nowrap;
+flex-shrink: 3;
+/*  display: flex;
+ justify-content: center; */
  font-weight: 700;
- font-size: 3.8rem;
- padding-top: 5rem;
- padding-bottom: 6rem;
+ max-width: 12.5rem;
+ font-size: 2rem;
+ padding-top: 3rem;
+ padding-left: 2rem;
+ padding-right: 2rem;
+ padding-bottom: 2.5rem;
 
 }
 
 .btn{
   font-family: "League Spartan", sans-serif; 
+ 
   font-size: 1.25rem;
-  width: 7.375rem;
+  width: 5rem;
   height: 1.875rem;
+
   padding-top: 0.15625rem;
-  padding-left: 1.75rem;
+  padding-left: 1.5rem;
   padding-top: 0.4rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  padding-right: 1rem;
+  margin-left: 3.5rem;
+  margin-right: 3.2rem;
   margin-top: 0.5rem;
   border-radius: 0.25rem;
   background-color: #3A6B35;

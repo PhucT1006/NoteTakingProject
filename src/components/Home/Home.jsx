@@ -1,52 +1,49 @@
-import { useAuth } from "../../context/AuthProvider";
+import CornellModal from "../Modal/CornellModal";
+import OutlineModal from "../Modal/OutlineModal";
+import MappingModal from "../Modal/MappingModal";
+import BoxingModal from "../Modal/BoxingModal";
+import { useState } from "react";
+import NavBar from "./NavBar";
+import s from "./Home.module.css";
 import { Link } from "react-router-dom";
-import style from "./Home.module.css";
 const Home = () => {
-  const { signOut } = useAuth();
-
-  const handleLogout = async (e) => {
-    e.preventDefault();
-    try {
-      const { error } = await signOut();
-      console.log(error);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [CornellStatus, setCornellStatus] = useState(false);
+  const [OutlineStatus, setOutlineStatus] = useState(false);
+  const [BoxingStatus, setBoxingStatus] = useState(false);
+  const [MappingStatus, setMappingStatus] = useState(false);
   return (
     <>
       {" "}
-      <div>
-        <nav className={style.navBar}>
-          <p className={style.currentPage}>Notes</p>
-          <ul className={style.navLinks}>
-            <li className={style.liItems}>
-              <Link to={"/StudyMethods"} className={style.links}>
-                Study Methods
-              </Link>
-            </li>
-            <li className={style.liItems}>
-              <Link to={"/TodoList"} className={style.links}>
-                Todo-List
-              </Link>
-            </li>
-            <li className={style.liItems}>
-              <Link to={"/Pomodoro"} className={style.links}>
-                Pomodoro
-              </Link>
-            </li>
-            <li className={style.liItems}>
-              <Link to={"/MyNotes"} className={style.links}>
-                My Notes
-              </Link>
-            </li>
-            <li className={style.liItems}>
-              <Link className={style.links} onClick={handleLogout}>
-                Log Out
-              </Link>
-            </li>
-          </ul>
-        </nav>
+      <NavBar />
+      <div className={s.outer}>
+        <div className={s.noteContainer}>
+          <div className={s.title}>Cornell Template</div>
+          <hr />
+          <Link to={"/CornellModal"} className={s.btn}>
+            Preview
+          </Link>
+        </div>
+        <div className={s.noteContainer}>
+          <div className={s.title}> Outline Template </div>
+          <hr />
+          <Link to={"/OutlineModal"} className={s.btn}>
+            Preview
+          </Link>
+        </div>
+        <div className={s.noteContainer}>
+          <div className={s.title}> Boxing Template </div>
+          <hr />
+          <Link to={"/BoxingModal"} className={s.btn}>
+            Preview
+          </Link>
+        </div>
+        <div className={s.noteContainer}>
+          <div className={s.title}> Mapping Template </div>
+          <hr />
+          <Link to={"/MappingModal"} className={s.btn}>
+            Preview
+          </Link>
+        </div>
       </div>
     </>
   );

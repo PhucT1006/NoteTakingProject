@@ -12,6 +12,11 @@ import LogIn from "./components/LogIn/LogIn";
 import ForgotPass from "./components/ForgotPass/ForgotPass";
 import ResetPass from "./components/ResetPassword/ResetPass";
 import Cornell from "./components/Cornell/Cornell";
+import CornellModal from "./components/Modal/CornellModal";
+import BoxingModal from "./components/Modal/BoxingModal";
+import OutlineModal from "./components/Modal/OutlineModal";
+import MappingModal from "./components/Modal/MappingModal";
+import EditCornell from "./components/Edit/EditCornell";
 import {
   Route,
   BrowserRouter,
@@ -70,8 +75,10 @@ function App() {
           <Route element={<AuthRoute />}>
             <Route path="/MyNotes" element={<MyNotes />} />
             <Route path="/Home" element={<Home />} />
+            <Route path="/Cornell" element={<Cornell />} />
+            <Route path="/:id" element={<EditCornell />} />
           </Route>
-          <Route path="/Notes" element={<Notes />} />
+          <Route path="/Notes" element={<Home />} />
           <Route path="/" element={<Index />} />
           <Route path="/StudyMethods" element={<StudyMethod />} />
           <Route path="/TodoList" element={<TodoList />} />
@@ -80,6 +87,10 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/ForgotPass" element={<ForgotPass />} />
           <Route path="/ResetPass" element={<ResetPass />} />
+          <Route path="/CornellModal" element={<CornellModal />} />
+          <Route path="/BoxingModal" element={<BoxingModal />} />
+          <Route path="/MappingModal" element={<MappingModal />} />
+          <Route path="/OutlineModal" element={<OutlineModal />} />
         </Routes>
       </BrowserRouter>
     </>

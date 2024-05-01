@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Notes = () => {
-  return <div>Notes</div>;
+  return <></>;
 };
 
 export default Notes;
