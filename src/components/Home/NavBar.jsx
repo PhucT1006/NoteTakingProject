@@ -23,7 +23,7 @@ const NavBar = () => {
               Study Methods
             </Link>
           </li>
-          <li className={style.liItems}>
+          {/* <li className={style.liItems}>
             <Link to={"/TodoList"} className={style.links}>
               Todo-List
             </Link>
@@ -32,7 +32,7 @@ const NavBar = () => {
             <Link to={"/Pomodoro"} className={style.links}>
               Pomodoro
             </Link>
-          </li>
+          </li> */}
           <li className={style.liItems}>
             <Link to={"/MyNotes"} className={style.links}>
               My Notes

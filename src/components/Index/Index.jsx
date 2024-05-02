@@ -26,7 +26,7 @@ const Index = () => {
                 Study Methods
               </Link>
             </li>
-            <li className={style.liItems}>
+            {/*  <li className={style.liItems}>
               <Link to={"/TodoList"} className={style.links}>
                 Todo-List
               </Link>
@@ -35,7 +35,7 @@ const Index = () => {
               <Link to={"/Pomodoro"} className={style.links}>
                 Pomodoro
               </Link>
-            </li>
+            </li> */}
             <li className={style.liItems}>
               <Link to={"/MyNotes"} className={style.links}>
                 My Notes

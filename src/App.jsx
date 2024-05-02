@@ -70,7 +70,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      {/* <RouterProvider router={router} /> */}
       <BrowserRouter>
         <Routes>
           <Route element={<AuthRoute />}>
