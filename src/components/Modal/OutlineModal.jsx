@@ -1,30 +1,32 @@
 import React from "react";
-import s from "./Modal.module.css";
-import NavBar from "../Home/NavBar";
+import s from "./Outline.module.css";
+
 import { Link } from "react-router-dom";
 function OutlineModal() {
   return (
     <>
-      <NavBar />
       <div className={s.background}>
         <div className={s.container}>
-          <Link to={"/Notes"} className={s.close}>
+          <Link to={"/StudyMethods"} className={s.close}>
             X
           </Link>
           <div className={s.title}>
-            <h1>Outline</h1>
+            <h1>Fyenman Technique</h1>
           </div>
-          <div className={s.pic}>
-            <img
-              src="src\img\Cornell.jpg"
-              alt="ertre"
-              width={305}
-              height={307}
-            />
-          </div>
-          <div className={s.btnPosition}>
-            <button className={s.use}>Use Template</button>
-          </div>
+          <ul>
+            <li>
+              <p className={s.rule}>1. Learn a concept</p>
+              <p className={s.rule}>2. Find a friend or sibling</p>
+              <p className={s.rule}>
+                3. Explain the concept to them like they're 5
+              </p>
+              <p className={s.finalRule}>
+                <strong>
+                  If you are able to do that then you have mastered the concept
+                </strong>
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </>

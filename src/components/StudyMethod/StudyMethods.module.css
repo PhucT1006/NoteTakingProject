@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+*{ /*reset*/
+   margin:0;
+   padding: 0;
+   text-decoration: none;
+  list-style-type: none;
+   box-sizing: border-box; /*make the text, padding, and margin a box */
+}    
+
+  body {
+ overflow: hidden;  
+} 
+.outer{
+  display: flex;
+  justify-content: space-evenly;
+ 
+  flex-grow: 1;
+  flex-shrink: 1;
+ height: 100vh;
+ /* background-color: ; */
+}
+.noteContainer{
+  width: 275px;
+  height: 425px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 0 1.25rem 6.25rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  
+padding: 1.5625rem;
+margin-right: 1rem;
+margin-left: 1rem;
+margin-top: 3rem;
+
+}
+
+.title{
+ font-family: "League Spartan", sans-serif; 
+ display: flex;
+ justify-content: center;
+ font-weight: 700;
+ font-size: 3.8rem;
+ padding-top: 5rem;
+ padding-bottom: 6rem;
+
+}
+
+.btn{
+  font-family: "League Spartan", sans-serif; 
+  font-size: 1.3rem;
+ width:  6rem;
+  height: 1.875rem;
+  padding-top: 0.15625rem;
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.4rem;
+  margin-left: 4rem;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #3A6B35;
+  color: #E3B448;
+  border: 1px solid whitesmoke;  
+  cursor: pointer;
+}
+
+.currentPage{
+
+  padding: 1rem 0 0.5rem 2rem;
+  font-family: "League Spartan", sans-serif; 
+  color: whitesmoke;
+  font-size: 3rem; 
+}
+
+.navBar{ /*editing the nav elements and everything containing within it */
+   display:flex; 
+   justify-content: space-between;
+   align-items: center;
+   background-color: #3A6B35; /* subject to change */
+}
+.navImg{ /*added padding for the logo in nav bar using the class "nav-img*/ 
+   
+   padding: 1rem 0 1rem 2rem;
+}
+
+ .navLinks,.links{ /* style the link on the nav bar with, font style, text color, font size, padding to get link into position wanted, and transition on the link*/
+   font-family: "League Spartan", sans-serif; 
+   color: whitesmoke;
+   font-size: 1.3rem; 
+   padding: 0.25rem;
+    transition: color .1s ease-in,.3s ease-out; 
+
+   animation-name: nav-slide; 
+   animation-duration:0.8s;
+   animation-timing-function: ease-in;
+}
+/*linkSpace*/
+.navLinks .liItems{ /*adjust link to get it into 1 line, and add padding with border to get into position wanted */
+   display: inline-block;
+   margin: 0.3rem; 
+   padding: 0.5rem 1rem 0.5rem 0rem;
+}
+
+ .links:hover { /*add shadow, inset so that it will encompass the element, 135px for the dimension in which the shadow will cover (135 px). also add color to the text when mouse hover over the link*/
+   box-shadow: inset 135px 0 0 0  #E3B448;  
+   color: black; /*color of text */
+ }
+
+ /*when working on the css for the picture, use padding top and bottom to align the text in the middle*/
+ /*for implementing images in css instead of html, use ../img/ to get into the correct folder for the images*/
+
+.container {
+   /*  background-color:aqua;  */
+   display: flex;
+   
+   background-image: url("../src/img/mainpic.png"); /*add the picture as a background image on the page*/
+   z-index: 99999;
+   background-size:cover; /*set the size of the image to cover the page*/
+   width: 100%; 
+   height:100vh;  /*take up 100% of the space available for the viewport*/
+   position: absolute;
+   background-position: bottom;
+   background-repeat: no-repeat;
+  
+   
+ /*   background-position:bottom; */
+}
+
+
+.mainText{
+ font-family: "League Spartan", sans-serif; 
+ font-size: 5rem;
+ display: flex;
+ padding-left: 6rem;
+ padding-top: 10rem ;
+ color:  #28282B ;
+ width: 32rem;
+ animation-name: slide;
+ animation-duration:0.8s;
+ animation-timing-function: ease-in;
+ 
+}/* change the main text on the page */
+
+/*animation for the main text*/
+@keyframes slide{
+ 0%{
+   opacity: 0;
+     transform: translateY(100px);
+ }
+ 100%{
+   opacity: 1;
+     transform: translateY(0);
+ } 
+}
+
+
+/*animation for the nav bar links*/
+@keyframes navSlide {
+ 0%{
+   opacity: 0;
+     transform: translateY(10px);
+ }
+ 100%{
+   opacity: 1;
+     transform: translateY(0);
+ } 
+} 
+@media screen and (min-width:576px) {
+   /*import the side nav bar thing into here, then code it. */
+ }
+

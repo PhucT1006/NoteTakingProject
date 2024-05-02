@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+ 
+.background{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+/*      position: fixed;  */
+  /*    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+   */
+   background-color: lightgrey;
+    
+}
+
+.container{
+        width: 425px;
+        height: 500px;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255);
+        box-shadow: 0 1.25rem 6.25rem rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+      padding: 1.5625rem;
+      margin-bottom: 4rem   ;
+    /*   margin-top: 1rem; */
+}
+
+.title{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-family: "League Spartan", sans-serif; 
+    color: #3A6B35;
+    
+}
+
+.close{
+    display: flex;
+    justify-content: flex-end;
+    border:none;
+    background-color: transparent;
+    font-size: 1.5625rem;
+    cursor: pointer;
+    font-family: "League Spartan", sans-serif; 
+}
+
+.pic{
+    display: flex;
+    justify-content: center;
+}
+
+.use{
+    font-family: "League Spartan", sans-serif; 
+  font-size: 1.25rem;
+  width: 9.375rem;
+  height: 1.875rem;
+  padding-top: 0.4rem;
+  padding-left: 1.3rem;
+  border-radius: 0.9375rem;
+  background-color: #3A6B35;
+  color: #E3B448;
+  border: 1px solid whitesmoke;  
+}
+
+.btnPosition{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+
+}
+.ruleHeader{
+    display: flex;
+    padding-top: 3rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600  ;
+    font-family: "League Spartan", sans-serif; 
+    
+}
+.rule{
+    display: flex;
+    padding-top: 3rem;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-family: "League Spartan", sans-serif; 
+    
+}
+
+.finalRule{
+    display: flex;
+    padding-top: 3rem;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: "League Spartan", sans-serif; 
+}

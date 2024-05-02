@@ -17,6 +17,7 @@ import BoxingModal from "./components/Modal/BoxingModal";
 import OutlineModal from "./components/Modal/OutlineModal";
 import MappingModal from "./components/Modal/MappingModal";
 import EditCornell from "./components/Edit/EditCornell";
+
 import {
   Route,
   BrowserRouter,
