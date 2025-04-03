@@ -1,4 +1,4 @@
-*Introduction
+# Introduction
 This is a simple website aimed to help students with note-taking. When using the website you will be able to choose a template and start taking note on it. Then you can save it and edit the note when you want. This project is still in the work. Main purpose is to learn how to work with HTML, CSS, Javascript, and React.  
 
 # React + Vite
